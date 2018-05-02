@@ -1,3 +1,11 @@
+<?php 
+//Disse to linier indsættes for at vise fejlmeddeleser for siden.
+//Husk at udkommentere dem inden siden sættes i drift!
+//ini_set('error_reporting', E_ALL);
+//ini_set('display_errors', '1')
+
+?>
+
 <!DOCTYPE html>
 <html lang="da">
 <!--Anvendt Bootstrap skabeleon redigeret til eget behov-->
@@ -35,14 +43,9 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Design og Visualisering <span class="glyphicon glyphicon-pencil"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="design/farveteori.html">Farveteori</a></li>
-                                <li><a href="design/gestalt.html">Gestalt og Designprincipper</a></li>
-                                <li><a href="design/typografi.html">Typografi</a></li>
-                                <li><a href="design/adobe.html">Adobe</a></li>
-                            </ul>
-                        </li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Beregner <span class="glyphicon glyphicon-pencil"></span></a>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>
+                            </li>
                     </ul>
                 </div>
             </div>
