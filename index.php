@@ -31,7 +31,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/programmering.js"></script>
-
+        <script src="js/formvalidering.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
     </head>
 
@@ -51,12 +51,12 @@
                             </span>
                         </button>
                         <!--Burgermenu Slut-->
-                        <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"> </span></a>
+                        <a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-home"> </span></a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Beregner <span class="glyphicon glyphicon-pencil"></span></a>
-                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a>
+                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>
                                 </li>
                         </ul>
                     </div>
@@ -65,7 +65,7 @@
         </header>
         <div id="pagewrap">
             <header>
-                <h1>Kæledyr</h1>
+                <h1>Kæledyrs Registrering</h1>
             </header>
             <form name="dyr_form" method="post" action="behandl_dyr.php">
                 <fieldset>
@@ -121,7 +121,7 @@
             </form>
             <section id="pets_form">
                 <?php while ($r = mysqli_fetch_array($resultat, MYSQLI_ASSOC)) { //En while-løkke der lægger hver række i $r
-                            echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><p>' . $r['dyrTekst'] . '</p></section>';
+                            echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><h4>' . $r['dyrTekst'] . '</h4></section>';
                         } 
                  ?>
             </section>
@@ -131,6 +131,6 @@
             <p>&copy; Copyright Maiken Mikkelsen, Anders Vinther, Gurli Tonsberg</p>
         </footer>
     </body>
-    <script src="js/formvalidering.js"></script>
+
 
     </html>

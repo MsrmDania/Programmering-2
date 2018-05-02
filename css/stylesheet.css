@@ -34,7 +34,8 @@
     margin: auto;
     border: 3px solid lightgrey;
     padding: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    background-image: url(../img/pet_bg_small.jpg) repeat 0 0;
 }
 
 footer {
@@ -43,3 +44,5 @@ footer {
     text-align: center;
     padding: 3em;
 }
+
+body {}
