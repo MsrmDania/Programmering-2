@@ -89,6 +89,7 @@
                         <option value="Andet">Andet</option>
                     </select><br>
                     <label>Kæledyrs alder:</label><br>
+                    <span id='fejltekst'></span>
                     <select id="dyrAlder" name="dyrAlder" onblur="dyrAlderOnBlurValidering()">
                         <option value="0">Vælg alder</option>
                         <option value="0-2">0 - 2 År</option>
@@ -104,6 +105,7 @@
                         <option value="Over30">Over 30 År</option>
                     </select><br>
                     <label>Køn:</label><br>
+                    <span id='fejltekst'></span>
                     <select id="dyrSex" name="dyrSex" onblur="dyrSexOnBlurValidering()">
                         <option value="0">Vælg køn</option>
                         <option value="Han">Han</option>
@@ -111,6 +113,7 @@
                         <option value="VedIkke">Ved Ikke</option>
                     </select><br>
                     <label>Navn på kæledyr:</label><br>
+                    <span id='fejltekst'></span>
                     <textarea id="dyrTekst" name="dyrTekst" onblur="dyrTekstOnBlurValidering()"></textarea><br>
                     <br>
                     <button type="submit" value="submit">Indsend</button>
