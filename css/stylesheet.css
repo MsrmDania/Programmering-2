@@ -32,5 +32,8 @@
 #pagewrap {
     max-width: 800px;
     margin: auto;
-    border: 3px solid #000000;
+    border: 3px solid lightgrey;
+    padding: 2em;
 }
+
+body {}

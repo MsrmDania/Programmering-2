@@ -70,7 +70,7 @@
                 <fieldset>
                     <legend>Mine kæledyr</legend>
                     <label>Typer af kæledyr:</label><br>
-                    <select id="dyrType" name="dyrType">
+                    <select id="dyrType" name="dyrType" onblur="dyrTypeOnBlurValidering()">
                         <option value="0">Vælg kæledyr</option>
                         <option value="Kat">Kat</option>
                         <option value="Hund">Hund</option>
@@ -87,7 +87,7 @@
                         <option value="Andet">Andet</option>
                     </select><br>
                     <label>Kæledyrs alder:</label><br>
-                    <select id="dyrAlder" name="dyrAlder">
+                    <select id="dyrAlder" name="dyrAlder" onblur="dyrAlderOnBlurValidering()">
                         <option value="0">Vælg alder</option>
                         <option value="0-2">0 - 2 År</option>
                         <option value="2-4">2 - 4 År</option>
@@ -102,7 +102,7 @@
                         <option value="Over30">Over 30 År</option>
                     </select><br>
                     <label>Køn:</label><br>
-                    <select id="dyrSex" name="dyrSex">
+                    <select id="dyrSex" name="dyrSex" onblur="dyrSexOnBlurValidering()">
                         <option value="0">Vælg køn</option>
                         <option value="Han">Han</option>
                         <option value="Hun">Hun</option>
