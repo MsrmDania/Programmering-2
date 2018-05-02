@@ -1,14 +1,14 @@
 <?php
 include("opendb.php");
 
-echo "Der er hul igennem til behandl_observation.php";
+//echo "Der er hul igennem til behandl_observation.php";
 
-$obstype = $_POST['dyrType'];
-$obstype = $_POST['dyrAlder'];
-$obstype = $_POST['dyrSex'];
-$obstekst = $_POST['dyrTekst'];
+$dyrType = $_POST['dyrType'];
+$dyrAlder = $_POST['dyrAlder'];
+$dyrSex = $_POST['dyrSex'];
+$dyrTekst = $_POST['dyrTekst'];
 
-$sql = "INSERT INTO Pets (obstype, obstekst) VALUES ('".$dyrtype."', '".$dyrAlder."', '".$dyrSex."', '".$dyrtekst."')";
+$sql = "INSERT INTO Pets (dyrType, dyrAlder, dyrSex, dyrTekst) VALUES ('".$dyrtype."', '".$dyrAlder."', '".$dyrSex."', '".$dyrtekst."')";
 
 echo("SQL: " . $sql);
 
