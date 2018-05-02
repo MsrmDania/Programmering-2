@@ -31,6 +31,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/programmering.js"></script>
+        <script src="js/formvalidering.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
     </head>
 
