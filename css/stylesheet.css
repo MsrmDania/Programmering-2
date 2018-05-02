@@ -34,6 +34,12 @@
     margin: auto;
     border: 3px solid lightgrey;
     padding: 2em;
+    margin-bottom: 1em;
 }
 
-footer {}
+footer {
+    background-color: #000000;
+    color: #999999;
+    text-align: center;
+    padding: 3em;
+}

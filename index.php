@@ -31,7 +31,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/programmering.js"></script>
-        <script src="js/formvalidering.js"></script>
+
         <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
     </head>
 
@@ -71,7 +71,8 @@
                 <fieldset>
                     <legend>Mine kæledyr</legend>
                     <label>Typer af kæledyr:</label><br>
-                    <select id="dyrType" name="dyrType">
+                    <span id='fejltekst'></span>
+                    <select id="dyrType" name="dyrType" onblur="dyrTypeOnBlurValidering()">
                         <option value="0">Vælg kæledyr</option>
                         <option value="Kat">Kat</option>
                         <option value="Hund">Hund</option>
@@ -88,7 +89,7 @@
                         <option value="Andet">Andet</option>
                     </select><br>
                     <label>Kæledyrs alder:</label><br>
-                    <select id="dyrAlder" name="dyrAlder">
+                    <select id="dyrAlder" name="dyrAlder" onblur="dyrAlderOnBlurValidering()">
                         <option value="0">Vælg alder</option>
                         <option value="0-2">0 - 2 År</option>
                         <option value="2-4">2 - 4 År</option>
@@ -103,14 +104,14 @@
                         <option value="Over30">Over 30 År</option>
                     </select><br>
                     <label>Køn:</label><br>
-                    <select id="dyrSex" name="dyrSex">
+                    <select id="dyrSex" name="dyrSex" onblur="dyrSexOnBlurValidering()">
                         <option value="0">Vælg køn</option>
                         <option value="Han">Han</option>
                         <option value="Hun">Hun</option>
                         <option value="VedIkke">Ved Ikke</option>
                     </select><br>
                     <label>Navn på kæledyr:</label><br>
-                    <textarea id="dyrTekst" name="dyrTekst"></textarea><br>
+                    <textarea id="dyrTekst" name="dyrTekst" onblur="dyrTekstOnBlurValidering()"></textarea><br>
                     <br>
                     <button type="submit" value="submit">Indsend</button>
                 </fieldset>
@@ -127,5 +128,6 @@
             <p>&copy; Copyright Maiken Mikkelsen, Anders Vinther, Gurli Tonsberg</p>
         </footer>
     </body>
+    <script src="js/formvalidering.js"></script>
 
     </html>
