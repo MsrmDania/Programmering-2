@@ -8,9 +8,12 @@
 <?php
 
  include("opendb.php");
-    $sql = 'SELECT dyrType, dyrAlder, dyrSex, dyrTekst FROM Pets LIMIT 50';
+    $sql = 'SELECT dyrType, dyrAlder, dyrSex, dyrTekst FROM pets LIMIT 50';
     //echo "sql: " . $sql; //udkommenteres når vi har tjekket at det virker
     $resultat = mysqli_query($conn, $sql); //hent værdier og læg dem i $resultat, så kan vi bruge dem senere
+    //$resultat = mysqli_query($conn, 'SELECT dyrType, dyrAlder, dyrSex, dyrTekst FROM pets LIMIT 50');
+
+
 
 ?>
 
@@ -112,9 +115,9 @@
                 </fieldset>
             </form>
             <section id="pets_form">
-                <?php while ($r = mysqli_fetch_array($resultat)) { //En while-løkke der lægger hver række i $r
+                <?php while ($r = mysqli_fetch_array($resultat, MYSQLI_ASSOC)) { //En while-løkke der lægger hver række i $r
                             echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><p>' . $r['dyrTekst'] . '</p></section>';
-                        }
+                        } 
                  ?>
             </section>
         </div>

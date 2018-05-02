@@ -8,7 +8,7 @@ $dyrAlder = $_POST['dyrAlder'];
 $dyrSex = $_POST['dyrSex'];
 $dyrTekst = $_POST['dyrTekst'];
 
-$sql = "INSERT INTO Pets (dyrType, dyrAlder, dyrSex, dyrTekst) VALUES ('".$dyrtype."', '".$dyrAlder."', '".$dyrSex."', '".$dyrtekst."')";
+$sql = "INSERT INTO pets (dyrType, dyrAlder, dyrSex, dyrTekst) VALUES ('".$dyrType."', '".$dyrAlder."', '".$dyrSex."', '".$dyrTekst."')";
 
 echo("SQL: " . $sql);
 
