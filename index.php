@@ -51,8 +51,46 @@
             </div>
         </nav>
     </header>
-    <div class="pagewrap">
+    <div id="pagewrap">
+        <header>
+            <h1>Kæledyr</h1>
+        </header>
+        <form name="dyr_form" method="post" action="behandl_dyr.php">
+            <fieldset>
+                <legend>Mine kæledyr</legend>
+                <label>Typer af kæledyr:</label><br>
+                <select id="dyrType" name="dyrType">
+                        <option value="Kat">Kat</option>
+                        <option value="Hund">Hund</option>
+                        <option value="Fugl">Fugl</option>
+                        <option value="Fisk">Fisk</option>
+                        <option value="Øgle">Øgle</option>
+                        <option value="Slange">Slange</option>
+                        <option value="Skildpadde">Skildpadde</option>
+                        <option value="Gnaver">Gnaver</option>
+                        <option value="Kanin">Kanin</option>
+                        <option value="Marsvin">Marsvin</option>
+                        <option value="Hamster">Hamster</option>
+                        <option value="Hest">Hest</option>
+                        <option value="Andet">Andet</option>
+                    </select><br>
+                <label>Observation:</label><br>
+                <textarea id="dyrTekst" name="dyrTekst"></textarea><br>
+                <br>
+                <button type="submit" value="submit">Submit</button>
+            </fieldset>
+        </form>
+        <section id="pets_form">
+            <?php while ($r = mysqli_fetch_array($resultat)) { //En while-løkke der lægger hver række i $r
+                            echo '<section class=""><h3>' . $r['obstype'] . '</h3><p>' . $r['obstekst'] . '</p></section>';
+                        } 
+                 ?>
+        </section>
+        <footer>
+            <p>&copy; Copyright Maiken Mikkelsen, Anders Vinther, Gurli Tonsberg</p>
+        </footer>
     </div>
+    <!-- pagewrap -->
 </body>
 
 </html>
