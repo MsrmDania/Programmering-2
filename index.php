@@ -4,6 +4,11 @@
 //ini_set('error_reporting', E_ALL);
 //ini_set('display_errors', '1')
 
+ include("opendb.php");
+    $sql = 'SELECT dyrtype, dyrtekst FROM Pets LIMIT 50';
+    //echo "sql: " . $sql; //udkommenteres når vi har tjekket at det virker
+    $resultat = mysqli_query($conn, $sql); //hent værdier og læg dem i $resultat, så kan vi bruge dem senere
+
 ?>
 
 <!DOCTYPE html>
@@ -74,15 +79,35 @@
                         <option value="Hest">Hest</option>
                         <option value="Andet">Andet</option>
                     </select><br>
-                <label>Observation:</label><br>
+                <label>Kæledyrs alder:</label><br>
+                <select id="dyrAlder" name="dyrAlder">
+                        <option value="0-2">0 - 2 År</option>
+                        <option value="2-4">2 - 4 År</option>
+                        <option value="4-6">4 - 6 År</option>
+                        <option value="6-8">6 - 8 År</option>
+                        <option value="8-10">8 - 10 År</option>
+                        <option value="10-14">10 - 14 År</option>
+                        <option value="14-18">14 - 18 År</option>
+                        <option value="18-22">18 - 22 År</option>
+                        <option value="22-26">22 - 26 År</option>
+                        <option value="26-30">26 - 30 År</option>
+                        <option value="Over30">Over 30 År</option>
+                    </select><br>
+                <label>Køn:</label><br>
+                <select id="dyrSex" name="dyrSex">
+                        <option value="Han">Han</option>
+                        <option value="Hun">Hun</option>
+                        <option value="VedIkke">Ved Ikke</option>
+                    </select><br>
+                <label>Navn på kæledyr:</label><br>
                 <textarea id="dyrTekst" name="dyrTekst"></textarea><br>
                 <br>
-                <button type="submit" value="submit">Submit</button>
+                <button type="submit" value="submit">Indsend</button>
             </fieldset>
         </form>
         <section id="pets_form">
             <?php while ($r = mysqli_fetch_array($resultat)) { //En while-løkke der lægger hver række i $r
-                            echo '<section class=""><h3>' . $r['obstype'] . '</h3><p>' . $r['obstekst'] . '</p></section>';
+                            echo '<section class=""><h3>' . $r['dyrtype'] . '</h3><p>' . $r['dyrtekst'] . '</p></section>';
                         } 
                  ?>
         </section>
