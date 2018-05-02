@@ -27,27 +27,27 @@ function validering() {
 
     nulstilTekstFelter();
 
-    if (document.pagewrap.dyrType.value == "0") {
+    if (document.dyrType.value == "0") {
         visfejltekst('Dyr skal udfyldes!');
-        document.pagewrap.dyrType.focus();
+        document.dyrType.focus();
         return false;
     } //dyr
     
-    if (document.pagewrap.dyrAlder.value == "0") {
+    if (document.dyrAlder.value == "0") {
         visfejltekst('Alder skal udfyldes!');
-        document.pagewrap.dyrAlder.focus();
+        document.dyrAlder.focus();
         return false;
     } //alder
     
-    if (document.pagewrap.dyrSex.value == "0") {
+    if (document.dyrSex.value == "0") {
         visfejltekst('Køn skal udfyldes!');
         document.pagewrap.dyrSex.focus();
         return false;
     } //køn
     
-    if (document.pagewrap.dyrTekst.value == "") {
+    if (document.dyrTekst.value == "") {
         visfejltekst('Navn skal udfyldes!');
-        document.pagewrap.dyrTekst.focus();
+        document.dyrTekst.focus();
         return false;
     } //navn
     
@@ -55,29 +55,33 @@ function validering() {
 }
 
 function dyrTypeOnBlurValidering() {
-    if (document.pagewrap.dyrType.value == "0") {
+    if (document.dyrType.value == "0") {
         visfejltekst('Dyr skal udfyldes!');
-        document.pagewrap.dyrType.focus();
+        document.dyrType.focus();
         return false;
 } //dyr onBlur
+}
 
 function dyrAlderOnBlurValidering() {
-    if (document.pagewrap.dyrAlder.value == "0") {
+    if (document.dyrAlder.value == "0") {
         visfejltekst('Alder skal udfyldes!');
-        document.pagewrap.dyrAlder.focus();
+        document.dyrAlder.focus();
         return false;
 } //alder onBlur
+}
 
 function dyrSexOnBlurValidering() {
-    if (document.pagewrap.dyrSex.value == "0") {
+    if (document.dyrSex.value == "0") {
         visfejltekst('Køn skal udfyldes!');
-        document.pagewrap.dyrSex.focus();
+        document.dyrSex.focus();
         return false;
 } //køn onBlur
+}
 
 function dyrTekstOnBlurValidering() {
-    if (document.pagewrap.dyrTekst.value == "") {
+    if (document.dyrTekst.value == "") {
         visfejltekst('Navn skal udfyldes!');
-        document.pagewrap.dyrTekst.focus();
+        document.dyrTekst.focus();
         return false;
 } //navn onBlur
+}
