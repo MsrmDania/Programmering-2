@@ -57,9 +57,11 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a>
-                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>
-                                </li>
+                            <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a>-->
+                            <li class="active"><a href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a></li>
+                            <li><a href="behind.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a></li>
+                            <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>-->
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -72,10 +74,10 @@
             <form name="dyr_form" method="post" action="behandl_dyr.php">
                 <fieldset>
                     <legend>Mine kæledyr</legend>
+
                     <!--Kæledyrs Type Start-->
                     <label>Typer af kæledyr:</label><br>
-                    <span id='fejltekst'></span>
-                    <select id="dyrType" name="dyrType" onblur="dyrTypeOnBlurValidering()">
+                    <select id="dyrType" name="dyrType">
                         <option value="0">Vælg kæledyr</option>
                         <option value="Kat">Kat</option>
                         <option value="Hund">Hund</option>
@@ -92,16 +94,16 @@
                         <option value="Andet">Andet</option>
                     </select><br>
                     <hr>
+
                     <!--Kæledyrs Race Start-->
                     <label>Kæledyrets race:</label><br>
-                    <span id='fejltekst'></span>
                     <textarea id="dyrRace" name="dyrRace"></textarea><br>
                     <br>
                     <hr>
+
                     <!--Kæledyrs Alder Start-->
                     <label>Kæledyrs alder:</label><br>
-                    <span id='fejltekst'></span>
-                    <select id="dyrAlder" name="dyrAlder" onblur="dyrAlderOnBlurValidering()">
+                    <select id="dyrAlder" name="dyrAlder">
                         <option value="0">Vælg alder</option>
                         <option value="0 - 2 år">0 - 2 År</option>
                         <option value="2 - 4 år">2 - 4 År</option>
@@ -116,10 +118,10 @@
                         <option value="Over 30 år">Over 30 År</option>
                     </select><br>
                     <hr>
+
                     <!--Kæledyrs Vægt Start-->
                     <label>Kæledyrs vægt:</label><br>
-                    <span id='fejltekst'></span>
-                    <select id="dyrVaegt" name="dyrVaegt" onblur="dyrVaegtOnBlurValidering()">
+                    <select id="dyrVaegt" name="dyrVaegt">
                         <option value="0">Vælg vægt</option>
                         <option value="0  -2 kg">0 - 2 Kg</option>
                         <option value="2 - 4 kg">2 - 4 Kg</option>
@@ -138,75 +140,78 @@
                         <option value="Over 300 kg">Over 300 Kg</option>
                     </select><br>
                     <hr>
+
                     <!--Kæledyrs Mad Start-->
                     <label>Kæledyrets yndlingsfoder:</label><br>
-                    <span id='fejltekst'></span>
-                    <select id="dyrMad" name="dyrMad" onblur="dyrMadOnBlurValidering()">
+                    <select id="dyrMad" name="dyrMad">
                         <option value="0">Vælg foder</option>
-                        <option value="Tørfoder">Tørfoder</option>
-                        <option value="Vådfoder">Vådfoder</option>
-                        <option value="Halm">Hø, halm og grønt</option>
+                        <option value="tørfoder">Tørfoder</option>
+                        <option value="vådfoder">Vådfoder</option>
+                        <option value="halm, hø og grønt">Hø, halm og grønt</option>
                     </select><br>
                     <hr>
+
                     <!--Kæledyrs Bo Start-->
-                    <label>kæledyrets bopæl:</label><br>
-                    <span id='fejltekst'></span>
-                    <select id="dyrBo" name="dyrBo" onblur="dyrBoOnBlurValidering()">
+                    <label>Kæledyrets bopæl:</label><br>
+                    <select id="dyrBo" name="dyrBo">
                         <option value="0">Vælg bopæl</option>
                         <option value="I byen">I byen</option>
                         <option value="På landet">På landet</option>
                         <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
                     <hr>
+
                     <!--Kæledyrs Vaccine Start-->
                     <label>Er kæledyret vaccineret?:</label><br>
-                    <span id='fejltekst'></span>
-                    <select id="dyrVacc" name="dyrVacc" onblur="dyrVaccOnBlurValidering()">
+                    <select id="dyrVacc" name="dyrVacc">
                         <option value="0">Vælg...</option>
                         <option value="Ja">Ja</option>
                         <option value="Nej">Nej</option>
                         <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
                     <hr>
+
                     <!--Kæledyrs Køn Start-->
                     <label>Kæledyrets Køn:</label><br>
-                    <span id='fejltekst'></span>
-                    <select id="dyrSex" name="dyrSex" onblur="dyrSexOnBlurValidering()">
+                    <select id="dyrSex" name="dyrSex">
                         <option value="0">Vælg køn</option>
                         <option value="Han">Han</option>
                         <option value="Hun">Hun</option>
                         <option value="Ved ikke">Ved Ikke</option>
                     </select><br>
                     <hr>
+
                     <!--Kæledyrs Farve Start-->
                     <label>Kæledyrs farve:</label><br>
-                    <span id='fejltekst'></span>
-                    <select id="dyrFarve" name="dyrFarve" onblur="dyrAlderOnBlurValidering()">
+                    <select id="dyrFarve" name="dyrFarve">
                         <option value="0">Vælg farve</option>
                         <option value="brun">Brun</option>
                         <option value="sort">Sort</option>
                         <option value="hvid">Hvid</option>
+                        <option value="grå">Grå</option>
                         <option value="broget">Broget</option>
                         <option value="rød">Rød</option>
                         <option value="fler farvet">Fler farvet</option>
                     </select><br>
                     <hr>
+
                     <!--Kæledyrs Navn Start-->
                     <label>Navn på kæledyr:</label><br>
-                    <span id='fejltekst'></span>
-                    <textarea id="dyrTekst" name="dyrTekst" onblur="dyrTekstOnBlurValidering()"></textarea><br>
+                    <textarea id="dyrTekst" name="dyrTekst"></textarea><br>
                     <br>
+
                     <!--Ejer Navn Start-->
                     <label>Ejers navn:</label><br>
-                    <span id='fejltekst'></span>
                     <textarea id="dyrEjer" name="dyrEjer"></textarea><br>
                     <br>
+
+                    <!--Submit Button-->
                     <button type="submit" value="submit">Indsend</button>
                 </fieldset>
             </form>
             <section id="pets_form">
                 <?php while ($r = mysqli_fetch_array($resultat)) { //En while-løkke der lægger hver række i $r
-                            echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><h4>' . $r['dyrTekst'] . " er en " . $r['dyrRace'] . " som er " . $r['dyrFarve'] . ", " . $r['dyrBo'] . " og foretrækker " . $r['dyrMad'] . '</h4></section>';
+                            echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><h4>' . $r['dyrTekst'] . " er en " . $r['dyrRace'] . " som er " . $r['dyrFarve'] . ", bor " . $r['dyrBo'] . " og foretrækker " . $r['dyrMad'] . '</h4></section>';
                         } 
                  ?>
             </section>

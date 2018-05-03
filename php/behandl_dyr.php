@@ -1,7 +1,7 @@
 <?php
 include("opendb.php");
 
-echo "Der er hul igennem til behandl_dyr.php";
+//echo "Der er hul igennem til behandl_dyr.php";
 
 $dyrType = $_POST['dyrType'];
 $dyrRace = $_POST['dyrRace'];
@@ -15,7 +15,7 @@ $dyrFarve = $_POST['dyrFarve'];
 $dyrTekst = $_POST['dyrTekst'];
 $dyrEjer = $_POST['dyrEjer'];
 
-$sql = "INSERT INTO pets (dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrSex, dyrVacc, dyrFarve, dyrTekst, dyrEjer) VALUES ('".$dyrType."', '".$dyrAlder."', '".$dyrRace."', '".$dyrVaegt."', '".$dyrMad."', '".$dyrBo."', '".$dyrVacc."', '".$dyrSex."', '".$dyrFarve."', '".$dyrTekst."', '".$dyrEjer."')";
+$sql = "INSERT INTO pets (dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrVacc, dyrSex, dyrFarve, dyrTekst, dyrEjer) VALUES ('".$dyrType."', '".$dyrRace."', '".$dyrAlder."', '".$dyrVaegt."', '".$dyrMad."', '".$dyrBo."', '".$dyrVacc."', '".$dyrSex."', '".$dyrFarve."', '".$dyrTekst."', '".$dyrEjer."')";
 
 echo("SQL: " . $sql);
 
