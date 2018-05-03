@@ -38,8 +38,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a>-->
-                        <li class="active"><a href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a></li>
-                        <li><a href="behind.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a></li>
+                        <li><a href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a></li>
+                        <li class="active"><a href="behind.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a></li>
                         <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>-->
                         </li>
                     </ul>
