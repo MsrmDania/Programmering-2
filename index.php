@@ -25,6 +25,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <title>Programmeringsopgave</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/stylesheet.css" rel="stylesheet">
@@ -96,8 +97,8 @@
                     <span id='fejltekst'></span>
                     <select id="dyrAlder" name="dyrAlder" onblur="dyrAlderOnBlurValidering()">
                         <option value="0">Vælg alder</option>
-                        <option value="0-2">0 - 2 År</option>
-                        <option value="2-4">2 - 4 År</option>
+                        <option value="0 - 2 år">0 - 2 År</option>
+                        <option value="2 - 4 år">2 - 4 År</option>
                         <option value="4-6">4 - 6 År</option>
                         <option value="6-8">6 - 8 År</option>
                         <option value="8-10">8 - 10 År</option>
@@ -106,7 +107,7 @@
                         <option value="18-22">18 - 22 År</option>
                         <option value="22-26">22 - 26 År</option>
                         <option value="26-30">26 - 30 År</option>
-                        <option value="Over30">Over 30 År</option>
+                        <option value="Over 30">Over 30 År</option>
                     </select><br>
                     <label>Kæledyrs vægt:</label><br>
                     <span id='fejltekst'></span>
@@ -130,20 +131,29 @@
                     </select><br>
                     <label>Kæledyrets yndlingsfoder:</label><br>
                     <span id='fejltekst'></span>
-                    <select id="dyrSex" name="dyrSex" onblur="dyrSexOnBlurValidering()">
+                    <select id="dyrMad" name="dyrMad" onblur="dyrSexOnBlurValidering()">
                         <option value="0">Vælg foder</option>
                         <option value="Tørfoder">Tørfoder</option>
                         <option value="Vådfoder">Vådfoder</option>
                         <option value="Halm">Hø, halm og grønt</option>
                         <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
-                    <label>Køn:</label><br>
+                    <label>kæledyrets bopæl:</label><br>
+                    <span id='fejltekst'></span>
+                    <select id="dyrBo" name="dyrBo" onblur="dyrSexOnBlurValidering()">
+                        <option value="0">Vælg bopæl</option>
+                        <option value="I byen">I byen</option>
+                        <option value="På landet">På landet</option>
+                        <option value="Ved Ikke">Ved Ikke</option>
+                    </select><br>
+                    <label>Kæledyrets yndlingsfoder:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrSex" name="dyrSex" onblur="dyrSexOnBlurValidering()">
-                        <option value="0">Vælg køn</option>
-                        <option value="Han">Han</option>
-                        <option value="Hun">Hun</option>
-                        <option value="VedIkke">Ved Ikke</option>
+                        <option value="0">Vælg foder</option>
+                        <option value="Tørfoder">Tørfoder</option>
+                        <option value="Vådfoder">Vådfoder</option>
+                        <option value="Halm">Hø, halm og grønt</option>
+                        <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
                     <label>Navn på kæledyr:</label><br>
                     <span id='fejltekst'></span>

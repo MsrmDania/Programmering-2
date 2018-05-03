@@ -5,10 +5,14 @@ include("opendb.php");
 
 $dyrType = $_POST['dyrType'];
 $dyrAlder = $_POST['dyrAlder'];
+$dyrVaegt = $_POST['dyrVaegt'];
+$dyrMad = $_POST['dyrMad'];
+$dyrBo = $_POST['dyrBo'];
 $dyrSex = $_POST['dyrSex'];
 $dyrTekst = $_POST['dyrTekst'];
+$dyrEjer = $_POST['dyrEjer'];
 
-$sql = "INSERT INTO pets (dyrType, dyrAlder, dyrSex, dyrTekst) VALUES ('".$dyrType."', '".$dyrAlder."', '".$dyrSex."', '".$dyrTekst."')";
+$sql = "INSERT INTO pets (dyrType, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrSex, dyrTekst, dyrEjer) VALUES ('".$dyrType."', '".$dyrAlder."', '".$dyrVaegt."', '".$dyrMad."', '".$dyrBo."', '".$dyrSex."', '".$dyrTekst."', '".$dyrEjer."')";
 
 echo("SQL: " . $sql);
 
