@@ -8,7 +8,7 @@
 <?php
 
  include("opendb.php");
-    $sql = 'SELECT dyrType, dyrAlder, dyrSex, dyrTekst FROM pets LIMIT 50';
+    $sql = 'SELECT dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrVacc, dyrFarve, dyrSex, dyrTekst, dyrEjer FROM pets LIMIT 50';
     //echo "sql: " . $sql; //udkommenteres når vi har tjekket at det virker
     $resultat = mysqli_query($conn, $sql); //hent værdier og læg dem i $resultat, så kan vi bruge dem senere
     //$resultat = mysqli_query($conn, 'SELECT dyrType, dyrAlder, dyrSex, dyrTekst FROM pets LIMIT 50');
@@ -140,7 +140,6 @@
                         <option value="Tørfoder">Tørfoder</option>
                         <option value="Vådfoder">Vådfoder</option>
                         <option value="Halm">Hø, halm og grønt</option>
-                        <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
                     <hr>
                     <label>kæledyrets bopæl:</label><br>
@@ -186,7 +185,7 @@
             </form>
             <section id="pets_form">
                 <?php while ($r = mysqli_fetch_array($resultat, MYSQLI_ASSOC)) { //En while-løkke der lægger hver række i $r
-                            echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><h4>' . $r['dyrTekst'] . '</h4></section>';
+                            echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><h4>' . $r['dyrTekst'] . " er en " . $r['dyrRace'] . " som er " . $r['dyrFarve'] . ", " . $r['dyrBo'] . " og foretrækker " . $r['dyrMad'] . '</h4></section>';
                         } 
                  ?>
             </section>

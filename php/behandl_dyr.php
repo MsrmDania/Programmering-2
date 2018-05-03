@@ -4,16 +4,18 @@ include("opendb.php");
 //echo "Der er hul igennem til behandl_observation.php";
 
 $dyrType = $_POST['dyrType'];
+$dyrRace = $_POST['dyrRace'];
 $dyrAlder = $_POST['dyrAlder'];
 $dyrVaegt = $_POST['dyrVaegt'];
 $dyrMad = $_POST['dyrMad'];
 $dyrBo = $_POST['dyrBo'];
 $dyrVacc = $_POST['dyrVacc'];
 $dyrSex = $_POST['dyrSex'];
+$dyrFarve = $_POST['dyrFarve'];
 $dyrTekst = $_POST['dyrTekst'];
 $dyrEjer = $_POST['dyrEjer'];
 
-$sql = "INSERT INTO pets (dyrType, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrSex, dyrTekst, dyrEjer) VALUES ('".$dyrType."', '".$dyrAlder."', '".$dyrVaegt."', '".$dyrMad."', '".$dyrBo."', '".$dyrVacc."', '".$dyrSex."', '".$dyrTekst."', '".$dyrEjer."')";
+$sql = "INSERT INTO pets (dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrSex, dyrVacc, dyrFarve, dyrTekst, dyrEjer) VALUES ('".$dyrType."', '".$dyrAlder."', '".$dyrRace."', '".$dyrVaegt."', '".$dyrMad."', '".$dyrBo."', '".$dyrVacc."', '".$dyrSex."', '".$dyrFarve."', '".$dyrTekst."', '".$dyrEjer."')";
 
 echo("SQL: " . $sql);
 
