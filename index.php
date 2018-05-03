@@ -33,7 +33,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/programmering.js"></script>
-        <script src="js/formvalidering.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
     </head>
 
@@ -61,7 +60,6 @@
                             <li class="active"><a href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a></li>
                             <li><a href="behind.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a></li>
                             <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>-->
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -97,7 +95,7 @@
 
                     <!--Kæledyrs Race Start-->
                     <label>Kæledyrets race:</label><br>
-                    <textarea id="dyrRace" name="dyrRace"></textarea><br>
+                    <input id="dyrRace" name="dyrRace"></input><br>
                     <br>
                     <hr>
 
@@ -197,16 +195,16 @@
 
                     <!--Kæledyrs Navn Start-->
                     <label>Navn på kæledyr:</label><br>
-                    <textarea id="dyrTekst" name="dyrTekst"></textarea><br>
+                    <input id="dyrTekst" name="dyrTekst"></input><br>
                     <br>
 
                     <!--Ejer Navn Start-->
                     <label>Ejers navn:</label><br>
-                    <textarea id="dyrEjer" name="dyrEjer"></textarea><br>
+                    <input id="dyrEjer" name="dyrEjer"></input><br>
                     <br>
 
                     <!--Submit Button-->
-                    <button type="submit" value="submit">Indsend</button>
+                    <button id="submit" type="submit" value="submit">Indsend</button>
                 </fieldset>
             </form>
             <section id="pets_form">
@@ -220,6 +218,22 @@
         <footer>
             <p>&copy; Copyright Maiken Mikkelsen, Anders Vinther, Gurli Tonsberg</p>
         </footer>
+
+        <script src="js/formvalidering.js"></script>
+        <script type="text/javascript" id="cookieinfo"
+	src="//cookieinfoscript.com/js/cookieinfo.min.js"
+	data-bg="#272627"
+	data-fg="#FFFFFF"
+	data-link="#c1c1c1"
+    data-linkmsg="Mere info"
+    data-message="På vores website bruges cookies til at huske dine indstillinger. Ved fortsat brug af websiden godkender du cookiepolitikken."
+	data-cookie="CookieInfoScript"
+	data-text-align="left"
+    data-close-text="OK!">
+</script>
+
+
+
     </body>
 
 

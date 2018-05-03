@@ -1,87 +1,102 @@
+var type, race, alder, vaegt, mad, bo, vacc, sex, farve, tekst, ejer;
+
+type = 0;
+race = 0;
+alder = 0;
+vaegt = 0;
+mad = 0;
+bo = 0;
+vacc = 0;
+sex = 0;
+farve = 0;
+tekst = 0;
+ejer = 0;
 
 
 
-function visfejltekst(fejltekst) {
-    document.getElementById('fejlfelt').style.display = "block";
-    document.getElementById('fejltekst').innerHTML = fejltekst;
+document.getElementById("dyrType").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrType").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrRace").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrRace").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrAlder").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrAlder").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrVaegt").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrVaegt").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrMad").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrMad").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrBo").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrBo").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrVacc").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrVacc").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrSex").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrSex").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrFarve").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrFarve").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrTekst").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrTekst").onblur = function () {
+    onBlurValid()
+};
+
+document.getElementById("dyrEjer").onfocus = function () {
+    onFocusValid()
+};
+document.getElementById("dyrEjer").onblur = function () {
+    onBlurValid()
+};
+
+
+
+function onBlurValid() {
+    document.getElementById("fejlfelt").style.backgroundColor = "red";
 }
 
-function visAdvarseltekst(advarseltekst) {
-    document.getElementById('advarselfelt').style.display = "block";
-    document.getElementById('advarseltekst').innerHTML = advarseltekst;
-}
-
-function vissuccestekst(succestekst) {
-    document.getElementById('succesfelt').style.display = "block";
-    document.getElementById('succestekst').innerHTML = succestekst;
-}
-
-function nulstilTekstFelter() {
-    document.getElementById('fejlfelt').style.display = "none";
-    document.getElementById('advarselfelt').style.display = "none";
-    document.getElementById('succesfelt').style.display = "none";
-}
-
-
-function validering() {
-
-    nulstilTekstFelter();
-
-    if (document.dyrType.value == "0") {
-        visfejltekst('Dyr skal udfyldes!');
-        document.dyrType.focus();
-        return false;
-    } //dyr
-    
-    if (document.dyrAlder.value == "0") {
-        visfejltekst('Alder skal udfyldes!');
-        document.dyrAlder.focus();
-        return false;
-    } //alder
-    
-    if (document.dyrSex.value == "0") {
-        visfejltekst('Køn skal udfyldes!');
-        document.pagewrap.dyrSex.focus();
-        return false;
-    } //køn
-    
-    if (document.dyrTekst.value == "") {
-        visfejltekst('Navn skal udfyldes!');
-        document.dyrTekst.focus();
-        return false;
-    } //navn
-    
-    
-}
-
-function dyrTypeOnBlurValidering() {
-    if (document.dyrType.value == "0") {
-        visfejltekst('Dyr skal udfyldes!');
-        document.dyrType.focus();
-        return false;
-} //dyr onBlur
-}
-
-function dyrAlderOnBlurValidering() {
-    if (document.dyrAlder.value == "0") {
-        visfejltekst('Alder skal udfyldes!');
-        document.dyrAlder.focus();
-        return false;
-} //alder onBlur
-}
-
-function dyrSexOnBlurValidering() {
-    if (document.dyrSex.value == "0") {
-        visfejltekst('Køn skal udfyldes!');
-        document.dyrSex.focus();
-        return false;
-} //køn onBlur
-}
-
-function dyrTekstOnBlurValidering() {
-    if (document.dyrTekst.value == "") {
-        visfejltekst('Navn skal udfyldes!');
-        document.dyrTekst.focus();
-        return false;
-} //navn onBlur
+function onFocusValid() {
+    document.getElementById("fejlfelt").style.backgroundColor = "lime";
 }
