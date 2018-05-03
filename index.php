@@ -88,6 +88,10 @@
                         <option value="Hest">Hest</option>
                         <option value="Andet">Andet</option>
                     </select><br>
+                    <label>Kæledyrets race:</label><br>
+                    <span id='fejltekst'></span>
+                    <textarea id="dyrRace" name="dyrRace"></textarea><br>
+                    <br>
                     <label>Kæledyrs alder:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrAlder" name="dyrAlder" onblur="dyrAlderOnBlurValidering()">
@@ -104,6 +108,35 @@
                         <option value="26-30">26 - 30 År</option>
                         <option value="Over30">Over 30 År</option>
                     </select><br>
+                    <label>Kæledyrs vægt:</label><br>
+                    <span id='fejltekst'></span>
+                    <select id="dyrVaegt" name="dyrVaegt" onblur="dyrAlderOnBlurValidering()">
+                        <option value="0">Vælg vægt</option>
+                        <option value="0-2">0 - 2 Kg</option>
+                        <option value="2-4">2 - 4 Kg</option>
+                        <option value="4-6">4 - 6 Kg</option>
+                        <option value="6-8">6 - 8 Kg</option>
+                        <option value="8-10">8 - 10 Kg</option>
+                        <option value="10-20">10 - 20 Kg</option>
+                        <option value="20-30">20 - 30 Kg</option>
+                        <option value="30-50">30 - 50 Kg</option>
+                        <option value="50-75">50 - 75 Kg</option>
+                        <option value="75-100">75 - 100 Kg</option>
+                        <option value="100-150">100 - 150 Kg</option>
+                        <option value="150-200">150 - 200 Kg</option>
+                        <option value="200-250">200 - 250 Kg</option>
+                        <option value="250-300">250 - 300 Kg</option>
+                        <option value="Over300">Over 300 Kg</option>
+                    </select><br>
+                    <label>Kæledyrets yndlingsfoder:</label><br>
+                    <span id='fejltekst'></span>
+                    <select id="dyrSex" name="dyrSex" onblur="dyrSexOnBlurValidering()">
+                        <option value="0">Vælg foder</option>
+                        <option value="Tørfoder">Tørfoder</option>
+                        <option value="Vådfoder">Vådfoder</option>
+                        <option value="Halm">Hø, halm og grønt</option>
+                        <option value="Ved Ikke">Ved Ikke</option>
+                    </select><br>
                     <label>Køn:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrSex" name="dyrSex" onblur="dyrSexOnBlurValidering()">
@@ -115,6 +148,10 @@
                     <label>Navn på kæledyr:</label><br>
                     <span id='fejltekst'></span>
                     <textarea id="dyrTekst" name="dyrTekst" onblur="dyrTekstOnBlurValidering()"></textarea><br>
+                    <br>
+                    <label>Ejers navn:</label><br>
+                    <span id='fejltekst'></span>
+                    <textarea id="dyrEjer" name="dyrEjer"></textarea><br>
                     <br>
                     <button type="submit" value="submit">Indsend</button>
                 </fieldset>
