@@ -8,8 +8,8 @@
 <?php
 
  include("opendb.php");
-    //$sql = 'SELECT dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrVacc, dyrFarve, dyrSex, dyrTekst, dyrEjer FROM pets LIMIT 50';
-    $sql =  'SELECT * FROM pets LIMIT 50';
+    $sql = 'SELECT dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrVacc, dyrFarve, dyrSex, dyrTekst, dyrEjer FROM pets LIMIT 50';
+    //$sql =  'SELECT * FROM pets LIMIT 50';
     //echo "sql: " . $sql; //udkommenteres når vi har tjekket at det virker
     $resultat = mysqli_query($conn, $sql); //hent værdier og læg dem i $resultat, så kan vi bruge dem senere
     //$resultat = mysqli_query($conn, 'SELECT dyrType, dyrAlder, dyrSex, dyrTekst FROM pets LIMIT 50');
@@ -72,6 +72,7 @@
             <form name="dyr_form" method="post" action="behandl_dyr.php">
                 <fieldset>
                     <legend>Mine kæledyr</legend>
+                    <!--Kæledyrs Type Start-->
                     <label>Typer af kæledyr:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrType" name="dyrType" onblur="dyrTypeOnBlurValidering()">
@@ -91,11 +92,13 @@
                         <option value="Andet">Andet</option>
                     </select><br>
                     <hr>
+                    <!--Kæledyrs Race Start-->
                     <label>Kæledyrets race:</label><br>
                     <span id='fejltekst'></span>
                     <textarea id="dyrRace" name="dyrRace"></textarea><br>
                     <br>
                     <hr>
+                    <!--Kæledyrs Alder Start-->
                     <label>Kæledyrs alder:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrAlder" name="dyrAlder" onblur="dyrAlderOnBlurValidering()">
@@ -113,6 +116,7 @@
                         <option value="Over 30 år">Over 30 År</option>
                     </select><br>
                     <hr>
+                    <!--Kæledyrs Vægt Start-->
                     <label>Kæledyrs vægt:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrVaegt" name="dyrVaegt" onblur="dyrVaegtOnBlurValidering()">
@@ -134,6 +138,7 @@
                         <option value="Over 300 kg">Over 300 Kg</option>
                     </select><br>
                     <hr>
+                    <!--Kæledyrs Mad Start-->
                     <label>Kæledyrets yndlingsfoder:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrMad" name="dyrMad" onblur="dyrMadOnBlurValidering()">
@@ -143,6 +148,7 @@
                         <option value="Halm">Hø, halm og grønt</option>
                     </select><br>
                     <hr>
+                    <!--Kæledyrs Bo Start-->
                     <label>kæledyrets bopæl:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrBo" name="dyrBo" onblur="dyrBoOnBlurValidering()">
@@ -152,6 +158,7 @@
                         <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
                     <hr>
+                    <!--Kæledyrs Vaccine Start-->
                     <label>Er kæledyret vaccineret?:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrVacc" name="dyrVacc" onblur="dyrVaccOnBlurValidering()">
@@ -161,6 +168,17 @@
                         <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
                     <hr>
+                    <!--Kæledyrs Køn Start-->
+                    <label>Kæledyrets Køn:</label><br>
+                    <span id='fejltekst'></span>
+                    <select id="dyrSex" name="dyrSex" onblur="dyrSexOnBlurValidering()">
+                        <option value="0">Vælg køn</option>
+                        <option value="Han">Han</option>
+                        <option value="Hun">Hun</option>
+                        <option value="Ved ikke">Ved Ikke</option>
+                    </select><br>
+                    <hr>
+                    <!--Kæledyrs Farve Start-->
                     <label>Kæledyrs farve:</label><br>
                     <span id='fejltekst'></span>
                     <select id="dyrFarve" name="dyrFarve" onblur="dyrAlderOnBlurValidering()">
@@ -173,10 +191,12 @@
                         <option value="fler farvet">Fler farvet</option>
                     </select><br>
                     <hr>
+                    <!--Kæledyrs Navn Start-->
                     <label>Navn på kæledyr:</label><br>
                     <span id='fejltekst'></span>
                     <textarea id="dyrTekst" name="dyrTekst" onblur="dyrTekstOnBlurValidering()"></textarea><br>
                     <br>
+                    <!--Ejer Navn Start-->
                     <label>Ejers navn:</label><br>
                     <span id='fejltekst'></span>
                     <textarea id="dyrEjer" name="dyrEjer"></textarea><br>

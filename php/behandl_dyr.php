@@ -1,7 +1,7 @@
 <?php
 include("opendb.php");
 
-//echo "Der er hul igennem til behandl_dyr.php";
+echo "Der er hul igennem til behandl_dyr.php";
 
 $dyrType = $_POST['dyrType'];
 $dyrRace = $_POST['dyrRace'];
