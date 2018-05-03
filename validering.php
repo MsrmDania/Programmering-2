@@ -15,6 +15,8 @@ $dyrFarve = $_POST['dyrFarve'];
 $dyrTekst = $_POST['dyrTekst'];
 $dyrEjer = $_POST['dyrEjer'];
 
+//Validering Start
+
 $errorsFound = [];
 if (strlen($dyrType) != 0) {
 	$errorsFound['dyrType'] = 'Der skal vælges et dyr';
@@ -50,14 +52,17 @@ if (empty($dyrEjer)) {
 	$errorsFound['dyrEjer'] = 'Angiv venligst ejerens navn';
 }
 
-$_SESSION['formErrors'] = $errorsFound;
-$_SESSION['lastInput'] = $_POST;
+//$_SESSION['formErrors'] = $errorsFound;
+//$_SESSION['lastInput'] = $_POST;
 
 if (!empty($errorsFound)) {
 	header('Location: index.php');
 }
 else {
-	$sql = "INSERT INTO pets (dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrVacc, dyrSex, dyrFarve, dyrTekst, dyrEjer) VALUES ('".$dyrType."', '".$dyrRace."', '".$dyrAlder."', '".$dyrVaegt."', '".$dyrMad."', '".$dyrBo."', '".$dyrVacc."', '".$dyrSex."', '".$dyrFarve."', '".$dyrTekst."', '".$dyrEjer."')";/*}*/
+	$sql = "INSERT INTO pets (dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrVacc, dyrSex, dyrFarve, dyrTekst, dyrEjer) VALUES ('".$dyrType."', '".$dyrRace."', '".$dyrAlder."', '".$dyrVaegt."', '".$dyrMad."', '".$dyrBo."', '".$dyrVacc."', '".$dyrSex."', '".$dyrFarve."', '".$dyrTekst."', '".$dyrEjer."')";
+}
+//Validering Slut
+
 
 	//echo("SQL: " . $sql);
 

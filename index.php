@@ -153,8 +153,8 @@
                     <label>Kæledyrets bopæl:</label><br>
                     <select id="dyrBo" name="dyrBo">
                         <option value="0">Vælg bopæl</option>
-                        <option value="I byen">I byen</option>
-                        <option value="På landet">På landet</option>
+                        <option value="i byen">I byen</option>
+                        <option value="på landet">På landet</option>
                         <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
                     <hr>

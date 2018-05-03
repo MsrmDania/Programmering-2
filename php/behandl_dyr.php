@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("opendb.php");
 
 //echo "Der er hul igennem til behandl_dyr.php";
