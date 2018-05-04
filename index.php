@@ -31,11 +31,12 @@ session_start();
             <title>Programmeringsopgave</title>
             <link href="css/bootstrap.min.css" rel="stylesheet">
             <link href="css/stylesheet.css" rel="stylesheet">
+            <link rel="shortcut icon" href="img/favicon.ico" type=image/x-icon>
+            <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
             <script src="js/programmering.js"></script>
-            <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
 
         <body onload="checkCookie()">
