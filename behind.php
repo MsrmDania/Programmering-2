@@ -15,6 +15,7 @@
     <script src="js/programmering.js"></script>
     <script src="js/formvalidering.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a>-->
-                        <li><a href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a></li>
+                        <li><a href="index.php">Mine Kæledyr <span class="fa fa-paw"></span></a></li>
                         <li class="active"><a href="behind.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a></li>
                         <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>-->
                         </li>

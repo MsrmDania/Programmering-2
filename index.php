@@ -35,6 +35,7 @@ session_start();
             <script src="js/bootstrap.min.js"></script>
             <script src="js/programmering.js"></script>
             <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
 
         <body onload="checkCookie()">
@@ -58,7 +59,7 @@ session_start();
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a>-->
-                                <li class="active"><a href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a></li>
+                                <li class="active"><a href="index.php">Mine Kæledyr <span class="fa fa-paw"></span></a></li>
                                 <li><a href="behind.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a></li>
                                 <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>-->
                             </ul>
@@ -99,7 +100,7 @@ session_start();
                         <!--Kæledyrs Race Start-->
                         <label>Kæledyrets race:</label><br>
                         <?PHP if (!empty($formErrors['dyrRace'])) echo '<b>'.$formErrors['dyrRace'].'</b>'; ?>
-                        <input onkeyup="onBlurValidRace()" id="dyrRace" name="dyrRace" required></input><br>
+                        <input onkeyup="onBlurValidRace()" id="dyrRace" name="dyrRace" required><br>
                         <br>
                         <hr>
 
@@ -127,7 +128,7 @@ session_start();
                         <?PHP if (!empty($formErrors['dyrVaegt'])) echo '<b>'.$formErrors['dyrVaegt'].'</b>'; ?>
                         <select id="dyrVaegt" name="dyrVaegt" required>
                         <option value="">Vælg vægt</option>
-                        <option value="0  -2 kg">0 - 2 Kg</option>
+                        <option value="0 - 2 kg">0 - 2 Kg</option>
                         <option value="2 - 4 kg">2 - 4 Kg</option>
                         <option value="4 - 6 kg">4 - 6 Kg</option>
                         <option value="6 - 8 kg">6 - 8 Kg</option>
@@ -163,7 +164,7 @@ session_start();
                         <option value="">Vælg bopæl</option>
                         <option value="i byen">I byen</option>
                         <option value="på landet">På landet</option>
-                        <option value="Ved Ikke">Ved Ikke</option>
+                        <option value="et ukendt sted">Ved Ikke</option>
                     </select><br>
                         <hr>
 
@@ -185,7 +186,7 @@ session_start();
                         <option value="">Vælg køn</option>
                         <option value="Han">Han</option>
                         <option value="Hun">Hun</option>
-                        <option value="Ved ikke">Ved Ikke</option>
+                        <option value="Den">Ved Ikke</option>
                     </select><br>
                         <hr>
 
@@ -200,6 +201,7 @@ session_start();
                         <option value="grå">Grå</option>
                         <option value="broget">Broget</option>
                         <option value="rød">Rød</option>
+                        <option value="gul">Gul</option>
                         <option value="fler farvet">Fler farvet</option>
                     </select><br>
                         <hr>
@@ -207,13 +209,13 @@ session_start();
                         <!--Kæledyrs Navn Start-->
                         <label>Navn på kæledyr:</label><br>
                         <?PHP if (!empty($formErrors['dyrTekst'])) echo '<b>'.$formErrors['dyrTekst'].'</b>'; ?>
-                        <input onkeyup="onBlurValidTekst()" id="dyrTekst" name="dyrTekst" required></input><br>
+                        <input onkeyup="onBlurValidTekst()" id="dyrTekst" name="dyrTekst" required><br>
                         <br>
 
                         <!--Ejer Navn Start-->
                         <label>Ejers navn:</label><br>
                         <?PHP if (!empty($formErrors['dyrEjer'])) echo '<b>'.$formErrors['dyrEjer'].'</b>'; ?>
-                        <input onkeyup="onBlurValidEjer()" id="dyrEjer" name="dyrEjer" required></input><br>
+                        <input onkeyup="onBlurValidEjer()" id="dyrEjer" name="dyrEjer" required><br>
                         <br>
 
                         <!--Submit Button-->
@@ -224,7 +226,7 @@ session_start();
                 </form>
                 <section id="pets_form">
                     <?php while ($r = mysqli_fetch_array($resultat)) { //En while-løkke der lægger hver række i $r
-                            echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><h4>' . $r['dyrTekst'] . " er en " . $r['dyrRace'] . " som er " . $r['dyrFarve'] . ", bor " . $r['dyrBo'] . " og foretrækker " . $r['dyrMad'] . '</h4></section>';
+                            echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><h4>' . $r['dyrTekst'] . " er en " . $r['dyrRace'] . " som er " . $r['dyrFarve'] . ", bor " . $r['dyrBo'] . ", foretrækker " . $r['dyrMad'] . " og vejer " . $r['dyrVaegt'] . ". " . $r['dyrSex'] . " har en ejer som hedder " . $r['dyrEjer'] . ". " . '</h4></section>';
                         } 
                  ?>
                 </section>

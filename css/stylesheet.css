@@ -38,8 +38,8 @@
 }
 
 footer {
-    background-color: #000000;
-    color: #999999;
+    background-color: #cbf0f0;
+    color: #313131 !important;
     text-align: center;
     padding: 3em;
 }
@@ -48,7 +48,10 @@ footer {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 100%
 }
+
+/*To Top Button Styling*/
 
 #myBtn {
     display: none;
@@ -58,13 +61,26 @@ footer {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: black;
-    color: white;
+    background-color: #cbf0f0;
+    color: #313131 !important;
     cursor: pointer;
     padding: 15px;
     border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.48);
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.48);
 }
 
 #myBtn:hover {
-    background-color: darkslategray;
+    background-color: #d2e6e6;
+}
+
+/*Navbar Styling*/
+
+.navbar-default {
+    background-color: #cbf0f0 !important;
+}
+
+.active a {
+    background-color: #d2e6e6 !important;
 }
