@@ -310,7 +310,7 @@ function onFocusValidMad() {
 function onBlurValidBo() {
     if (document.dyr_form.dyrBo.value === "i byen" ||
         document.dyr_form.dyrBo.value === "på landet" ||
-        document.dyr_form.dyrBo.value === "Ved Ikke") {
+        document.dyr_form.dyrBo.value === "et ukendt sted") {
         document.getElementById("dyrBo").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vBo = "true";
     } else {
