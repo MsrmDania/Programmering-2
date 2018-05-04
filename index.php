@@ -36,7 +36,7 @@
         <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
     </head>
 
-    <body>
+    <body onload="checkCookie()">
         <header>
             <!--Navigationsbar-->
             <nav class="navbar navbar-default navbar-static-top" role="navigation">
@@ -69,14 +69,14 @@
             <header>
                 <h1>Kæledyrs Registrering</h1>
             </header>
-            <form name="dyr_form" method="post" action="behandl_dyr.php">
+            <form onsubmit="return validate()" name="dyr_form" method="post" action="behandl_dyr.php">
                 <fieldset>
                     <legend>Mine kæledyr</legend>
 
                     <!--Kæledyrs Type Start-->
                     <label>Typer af kæledyr:</label><br>
-                    <select id="dyrType" name="dyrType">
-                        <option value="0">Vælg kæledyr</option>
+                    <select id="dyrType" name="dyrType" required>
+                        <option value="">Vælg kæledyr</option>
                         <option value="Kat">Kat</option>
                         <option value="Hund">Hund</option>
                         <option value="Fugl">Fugl</option>
@@ -95,14 +95,14 @@
 
                     <!--Kæledyrs Race Start-->
                     <label>Kæledyrets race:</label><br>
-                    <input id="dyrRace" name="dyrRace"></input><br>
+                    <input id="dyrRace" name="dyrRace" required></input><br>
                     <br>
                     <hr>
 
                     <!--Kæledyrs Alder Start-->
                     <label>Kæledyrs alder:</label><br>
-                    <select id="dyrAlder" name="dyrAlder">
-                        <option value="0">Vælg alder</option>
+                    <select id="dyrAlder" name="dyrAlder" required>
+                        <option value="">Vælg alder</option>
                         <option value="0 - 2 år">0 - 2 År</option>
                         <option value="2 - 4 år">2 - 4 År</option>
                         <option value="4 - 6 år">4 - 6 År</option>
@@ -119,8 +119,8 @@
 
                     <!--Kæledyrs Vægt Start-->
                     <label>Kæledyrs vægt:</label><br>
-                    <select id="dyrVaegt" name="dyrVaegt">
-                        <option value="0">Vælg vægt</option>
+                    <select id="dyrVaegt" name="dyrVaegt" required>
+                        <option value="">Vælg vægt</option>
                         <option value="0  -2 kg">0 - 2 Kg</option>
                         <option value="2 - 4 kg">2 - 4 Kg</option>
                         <option value="4 - 6 kg">4 - 6 Kg</option>
@@ -141,8 +141,8 @@
 
                     <!--Kæledyrs Mad Start-->
                     <label>Kæledyrets yndlingsfoder:</label><br>
-                    <select id="dyrMad" name="dyrMad">
-                        <option value="0">Vælg foder</option>
+                    <select id="dyrMad" name="dyrMad" required>
+                        <option value="">Vælg foder</option>
                         <option value="tørfoder">Tørfoder</option>
                         <option value="vådfoder">Vådfoder</option>
                         <option value="halm, hø og grønt">Hø, halm og grønt</option>
@@ -151,8 +151,8 @@
 
                     <!--Kæledyrs Bo Start-->
                     <label>Kæledyrets bopæl:</label><br>
-                    <select id="dyrBo" name="dyrBo">
-                        <option value="0">Vælg bopæl</option>
+                    <select id="dyrBo" name="dyrBo" required>
+                        <option value="">Vælg bopæl</option>
                         <option value="i byen">I byen</option>
                         <option value="på landet">På landet</option>
                         <option value="Ved Ikke">Ved Ikke</option>
@@ -161,8 +161,8 @@
 
                     <!--Kæledyrs Vaccine Start-->
                     <label>Er kæledyret vaccineret?:</label><br>
-                    <select id="dyrVacc" name="dyrVacc">
-                        <option value="0">Vælg...</option>
+                    <select id="dyrVacc" name="dyrVacc" required>
+                        <option value="">Vælg...</option>
                         <option value="Ja">Ja</option>
                         <option value="Nej">Nej</option>
                         <option value="Ved Ikke">Ved Ikke</option>
@@ -171,8 +171,8 @@
 
                     <!--Kæledyrs Køn Start-->
                     <label>Kæledyrets Køn:</label><br>
-                    <select id="dyrSex" name="dyrSex">
-                        <option value="0">Vælg køn</option>
+                    <select id="dyrSex" name="dyrSex" required>
+                        <option value="">Vælg køn</option>
                         <option value="Han">Han</option>
                         <option value="Hun">Hun</option>
                         <option value="Ved ikke">Ved Ikke</option>
@@ -181,8 +181,8 @@
 
                     <!--Kæledyrs Farve Start-->
                     <label>Kæledyrs farve:</label><br>
-                    <select id="dyrFarve" name="dyrFarve">
-                        <option value="0">Vælg farve</option>
+                    <select id="dyrFarve" name="dyrFarve" required>
+                        <option value="">Vælg farve</option>
                         <option value="brun">Brun</option>
                         <option value="sort">Sort</option>
                         <option value="hvid">Hvid</option>
@@ -195,12 +195,12 @@
 
                     <!--Kæledyrs Navn Start-->
                     <label>Navn på kæledyr:</label><br>
-                    <input id="dyrTekst" name="dyrTekst"></input><br>
+                    <input id="dyrTekst" name="dyrTekst" required></input><br>
                     <br>
 
                     <!--Ejer Navn Start-->
                     <label>Ejers navn:</label><br>
-                    <input id="dyrEjer" name="dyrEjer"></input><br>
+                    <input id="dyrEjer" name="dyrEjer" required></input><br>
                     <br>
 
                     <!--Submit Button-->
