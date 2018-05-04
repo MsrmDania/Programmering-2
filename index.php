@@ -6,7 +6,7 @@ session_start();
 //ini_set('display_errors', '1')
 ?>
 
-<?php
+    <?php
 
  include("opendb.php");
     $sql = 'SELECT dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrVacc, dyrFarve, dyrSex, dyrTekst, dyrEjer FROM pets LIMIT 50';
@@ -19,32 +19,32 @@ session_start();
 
 ?>
 
-    <!DOCTYPE html>
-    <html lang="da">
-    <!--Anvendt Bootstrap skabeleon redigeret til eget behov-->
+        <!DOCTYPE html>
+        <html lang="da">
+        <!--Anvendt Bootstrap skabeleon redigeret til eget behov-->
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-        <title>Programmeringsopgave</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/stylesheet.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/programmering.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
-    </head>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+            <title>Programmeringsopgave</title>
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/stylesheet.css" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/programmering.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+        </head>
 
-    <body onload="checkCookie()">
-        <header>
-            <!--Navigationsbar-->
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <!--Burgermenu-->
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+        <body onload="checkCookie()">
+            <header>
+                <!--Navigationsbar-->
+                <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <!--Burgermenu-->
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
                         <span class="icon-bar">
                             </span>
                         <span class="icon-bar">
@@ -52,33 +52,33 @@ session_start();
                         <span class="icon-bar">
                             </span>
                         </button>
-                        <!--Burgermenu Slut-->
-                        <a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-home"> </span></a>
+                            <!--Burgermenu Slut-->
+                            <a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-home"> </span></a>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a>-->
+                                <li class="active"><a href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a></li>
+                                <li><a href="behind.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a></li>
+                                <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>-->
+                            </ul>
+                        </div>
                     </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a>-->
-                            <li class="active"><a href="index.php">Mine Kæledyr <span class="glyphicon glyphicon-pencil"></span></a></li>
-                            <li><a href="behind.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a></li>
-                            <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Behind the Scenes <span class="glyphicon glyphicon-tasks"></span></a>-->
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <!--Navbar Slut-->
-        <div id="pagewrap">
-            <header>
-                <h1>Kæledyrs Registrering</h1>
+                </nav>
             </header>
-            <form name="dyr_form" method="post" action="behandl_dyr.php">
-                <fieldset>
-                    <legend>Mine kæledyr</legend>
+            <!--Navbar Slut-->
+            <div id="pagewrap">
+                <header>
+                    <h1>Kæledyrs Registrering</h1>
+                </header>
+                <form name="dyr_form" method="post" action="behandl_dyr.php">
+                    <fieldset>
+                        <legend>Mine kæledyr</legend>
 
-                    <!--Kæledyrs Type Start-->
-                    <label>Typer af kæledyr:</label><br>
-                    <?PHP if (!empty($formErrors['dyrType'])) echo '<b>'.$formErrors['dyrType'].'</b>'; ?>
-                    <select id="dyrType" name="dyrType" required>
+                        <!--Kæledyrs Type Start-->
+                        <label>Typer af kæledyr:</label><br>
+                        <?PHP if (!empty($formErrors['dyrType'])) echo '<b>'.$formErrors['dyrType'].'</b>'; ?>
+                        <select id="dyrType" name="dyrType" required>
                         <option value="">Vælg kæledyr</option>
                         <option value="Kat">Kat</option>
                         <option value="Hund">Hund</option>
@@ -94,19 +94,19 @@ session_start();
                         <option value="Hest">Hest</option>
                         <option value="Andet">Andet</option>
                     </select><br>
-                    <hr>
+                        <hr>
 
-                    <!--Kæledyrs Race Start-->
-                    <label>Kæledyrets race:</label><br>
-                    <?PHP if (!empty($formErrors['dyrRace'])) echo '<b>'.$formErrors['dyrRace'].'</b>'; ?>
-                    <input onkeyup="onBlurValidRace()" id="dyrRace" name="dyrRace" required></input><br>
-                    <br>
-                    <hr>
+                        <!--Kæledyrs Race Start-->
+                        <label>Kæledyrets race:</label><br>
+                        <?PHP if (!empty($formErrors['dyrRace'])) echo '<b>'.$formErrors['dyrRace'].'</b>'; ?>
+                        <input onkeyup="onBlurValidRace()" id="dyrRace" name="dyrRace" required></input><br>
+                        <br>
+                        <hr>
 
-                    <!--Kæledyrs Alder Start-->
-                    <label>Kæledyrs alder:</label><br>
-                    <?PHP if (!empty($formErrors['dyrAlder'])) echo '<b>'.$formErrors['dyrAlder'].'</b>'; ?>
-                    <select id="dyrAlder" name="dyrAlder" required>
+                        <!--Kæledyrs Alder Start-->
+                        <label>Kæledyrs alder:</label><br>
+                        <?PHP if (!empty($formErrors['dyrAlder'])) echo '<b>'.$formErrors['dyrAlder'].'</b>'; ?>
+                        <select id="dyrAlder" name="dyrAlder" required>
                         <option value="">Vælg alder</option>
                         <option value="0 - 2 år">0 - 2 År</option>
                         <option value="2 - 4 år">2 - 4 År</option>
@@ -120,12 +120,12 @@ session_start();
                         <option value="26 - 30 år">26 - 30 År</option>
                         <option value="Over 30 år">Over 30 År</option>
                     </select><br>
-                    <hr>
+                        <hr>
 
-                    <!--Kæledyrs Vægt Start-->
-                    <label>Kæledyrs vægt:</label><br>
-                    <?PHP if (!empty($formErrors['dyrVaegt'])) echo '<b>'.$formErrors['dyrVaegt'].'</b>'; ?>
-                    <select id="dyrVaegt" name="dyrVaegt" required>
+                        <!--Kæledyrs Vægt Start-->
+                        <label>Kæledyrs vægt:</label><br>
+                        <?PHP if (!empty($formErrors['dyrVaegt'])) echo '<b>'.$formErrors['dyrVaegt'].'</b>'; ?>
+                        <select id="dyrVaegt" name="dyrVaegt" required>
                         <option value="">Vælg vægt</option>
                         <option value="0  -2 kg">0 - 2 Kg</option>
                         <option value="2 - 4 kg">2 - 4 Kg</option>
@@ -143,56 +143,56 @@ session_start();
                         <option value="250 - 300 kg">250 - 300 Kg</option>
                         <option value="Over 300 kg">Over 300 Kg</option>
                     </select><br>
-                    <hr>
+                        <hr>
 
-                    <!--Kæledyrs Mad Start-->
-                    <label>Kæledyrets yndlingsfoder:</label><br>
-                    <?PHP if (!empty($formErrors['dyrMad'])) echo '<b>'.$formErrors['dyrMad'].'</b>'; ?>
-                    <select id="dyrMad" name="dyrMad" required>
+                        <!--Kæledyrs Mad Start-->
+                        <label>Kæledyrets yndlingsfoder:</label><br>
+                        <?PHP if (!empty($formErrors['dyrMad'])) echo '<b>'.$formErrors['dyrMad'].'</b>'; ?>
+                        <select id="dyrMad" name="dyrMad" required>
                         <option value="">Vælg foder</option>
                         <option value="tørfoder">Tørfoder</option>
                         <option value="vådfoder">Vådfoder</option>
                         <option value="halm, hø og grønt">Hø, halm og grønt</option>
                     </select><br>
-                    <hr>
+                        <hr>
 
-                    <!--Kæledyrs Bo Start-->
-                    <label>Kæledyrets bopæl:</label><br>
-                    <?PHP if (!empty($formErrors['dyrBo'])) echo '<b>'.$formErrors['dyrBo'].'</b>'; ?>
-                    <select id="dyrBo" name="dyrBo" required>
+                        <!--Kæledyrs Bo Start-->
+                        <label>Kæledyrets bopæl:</label><br>
+                        <?PHP if (!empty($formErrors['dyrBo'])) echo '<b>'.$formErrors['dyrBo'].'</b>'; ?>
+                        <select id="dyrBo" name="dyrBo" required>
                         <option value="">Vælg bopæl</option>
                         <option value="i byen">I byen</option>
                         <option value="på landet">På landet</option>
                         <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
-                    <hr>
+                        <hr>
 
-                    <!--Kæledyrs Vaccine Start-->
-                    <label>Er kæledyret vaccineret?:</label><br>
-                    <?PHP if (!empty($formErrors['dyrVacc'])) echo '<b>'.$formErrors['dyrVacc'].'</b>'; ?>
-                    <select id="dyrVacc" name="dyrVacc" required>
+                        <!--Kæledyrs Vaccine Start-->
+                        <label>Er kæledyret vaccineret?:</label><br>
+                        <?PHP if (!empty($formErrors['dyrVacc'])) echo '<b>'.$formErrors['dyrVacc'].'</b>'; ?>
+                        <select id="dyrVacc" name="dyrVacc" required>
                         <option value="">Vælg...</option>
                         <option value="Ja">Ja</option>
                         <option value="Nej">Nej</option>
                         <option value="Ved Ikke">Ved Ikke</option>
                     </select><br>
-                    <hr>
+                        <hr>
 
-                    <!--Kæledyrs Køn Start-->
-                    <label>Kæledyrets Køn:</label><br>
-                    <?PHP if (!empty($formErrors['dyrSex'])) echo '<b>'.$formErrors['dyrSex'].'</b>'; ?>
-                    <select id="dyrSex" name="dyrSex" required>
+                        <!--Kæledyrs Køn Start-->
+                        <label>Kæledyrets Køn:</label><br>
+                        <?PHP if (!empty($formErrors['dyrSex'])) echo '<b>'.$formErrors['dyrSex'].'</b>'; ?>
+                        <select id="dyrSex" name="dyrSex" required>
                         <option value="">Vælg køn</option>
                         <option value="Han">Han</option>
                         <option value="Hun">Hun</option>
                         <option value="Ved ikke">Ved Ikke</option>
                     </select><br>
-                    <hr>
+                        <hr>
 
-                    <!--Kæledyrs Farve Start-->
-                    <label>Kæledyrs farve:</label><br>
-                    <?PHP if (!empty($formErrors['dyrFarve'])) echo '<b>'.$formErrors['dyrFarve'].'</b>'; ?>
-                    <select id="dyrFarve" name="dyrFarve" required>
+                        <!--Kæledyrs Farve Start-->
+                        <label>Kæledyrs farve:</label><br>
+                        <?PHP if (!empty($formErrors['dyrFarve'])) echo '<b>'.$formErrors['dyrFarve'].'</b>'; ?>
+                        <select id="dyrFarve" name="dyrFarve" required>
                         <option value="">Vælg farve</option>
                         <option value="brun">Brun</option>
                         <option value="sort">Sort</option>
@@ -202,45 +202,50 @@ session_start();
                         <option value="rød">Rød</option>
                         <option value="fler farvet">Fler farvet</option>
                     </select><br>
-                    <hr>
+                        <hr>
 
-                    <!--Kæledyrs Navn Start-->
-                    <label>Navn på kæledyr:</label><br>
-                    <?PHP if (!empty($formErrors['dyrTekst'])) echo '<b>'.$formErrors['dyrTekst'].'</b>'; ?>
-                    <input onkeyup="onBlurValidTekst()" id="dyrTekst" name="dyrTekst" required></input><br>
-                    <br>
+                        <!--Kæledyrs Navn Start-->
+                        <label>Navn på kæledyr:</label><br>
+                        <?PHP if (!empty($formErrors['dyrTekst'])) echo '<b>'.$formErrors['dyrTekst'].'</b>'; ?>
+                        <input onkeyup="onBlurValidTekst()" id="dyrTekst" name="dyrTekst" required></input><br>
+                        <br>
 
-                    <!--Ejer Navn Start-->
-                    <label>Ejers navn:</label><br>
-                    <?PHP if (!empty($formErrors['dyrEjer'])) echo '<b>'.$formErrors['dyrEjer'].'</b>'; ?>
-                    <input onkeyup="onBlurValidEjer()" id="dyrEjer" name="dyrEjer" required></input><br>
-                    <br>
+                        <!--Ejer Navn Start-->
+                        <label>Ejers navn:</label><br>
+                        <?PHP if (!empty($formErrors['dyrEjer'])) echo '<b>'.$formErrors['dyrEjer'].'</b>'; ?>
+                        <input onkeyup="onBlurValidEjer()" id="dyrEjer" name="dyrEjer" required></input><br>
+                        <br>
 
-                    <!--Submit Button-->
-                    <button id="submit" type="submit" value="submit">Indsend</button>
-                </fieldset>
-            </form>
-            <section id="pets_form">
-                <?php while ($r = mysqli_fetch_array($resultat)) { //En while-løkke der lægger hver række i $r
+                        <!--Submit Button-->
+                        <button id="submit" type="submit" value="submit">Indsend</button>
+                        <hr>
+                        <h2>Registreringer:</h2>
+                    </fieldset>
+                </form>
+                <section id="pets_form">
+                    <?php while ($r = mysqli_fetch_array($resultat)) { //En while-løkke der lægger hver række i $r
                             echo '<section class=""><h3>' . $r['dyrType'] . ", " . $r['dyrAlder'] . ", " . $r['dyrSex'] . '</h3><h4>' . $r['dyrTekst'] . " er en " . $r['dyrRace'] . " som er " . $r['dyrFarve'] . ", bor " . $r['dyrBo'] . " og foretrækker " . $r['dyrMad'] . '</h4></section>';
                         } 
                  ?>
-            </section>
-        </div>
-        <!-- pagewrap -->
-        <footer>
-            <p>&copy; Copyright Maiken Mikkelsen, Anders Vinther, Gurli Tonsberg</p>
-        </footer>
+                </section>
+                <hr>
+                <button onclick="topFunction()" id="myBtn" title="Tilbage til toppen">Top</button>
+                <img id="pet_image" src="img/pet_bg_small.jpg" alt="Et billede af dyr">
+            </div>
+            <!-- pagewrap -->
+            <footer>
+                <p>&copy; Copyright Maiken Mikkelsen, Anders Vinther, Gurli Tonsberg</p>
+            </footer>
 
-        <script src="js/formvalidering.js"></script>
-        <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js" data-bg="#272627" data-fg="#FFFFFF" data-link="#c1c1c1" data-linkmsg="Mere info" data-message="På vores website bruges cookies til at huske dine indstillinger. Ved fortsat brug af websiden godkender du cookiepolitikken." data-cookie="CookieInfoScript" data-text-align="left" data-close-text="OK!">
-
-
-        </script>
-
-
-
-    </body>
+            <script src="js/formvalidering.js"></script>
+            <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js" data-bg="#272627" data-fg="#FFFFFF" data-link="#c1c1c1" data-linkmsg="Mere info" data-message="På vores website bruges cookies til at huske dine indstillinger. Ved fortsat brug af websiden godkender du cookiepolitikken." data-cookie="CookieInfoScript" data-text-align="left" data-close-text="OK!">
 
 
-    </html>
+            </script>
+
+
+
+        </body>
+
+
+        </html>
