@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 //Disse to linier indsættes for at vise fejlmeddeleser for siden.
 //Husk at udkommentere dem inden siden sættes i drift!
 //ini_set('error_reporting', E_ALL);
@@ -65,16 +66,18 @@
                 </div>
             </nav>
         </header>
+        <!--Navbar Slut-->
         <div id="pagewrap">
             <header>
                 <h1>Kæledyrs Registrering</h1>
             </header>
-            <form onsubmit="return validate()" name="dyr_form" method="post" action="behandl_dyr.php">
+            <form name="dyr_form" method="post" action="behandl_dyr.php">
                 <fieldset>
                     <legend>Mine kæledyr</legend>
 
                     <!--Kæledyrs Type Start-->
                     <label>Typer af kæledyr:</label><br>
+                    <?PHP if (!empty($formErrors['dyrType'])) echo '<b>'.$formErrors['dyrType'].'</b>'; ?>
                     <select id="dyrType" name="dyrType" required>
                         <option value="">Vælg kæledyr</option>
                         <option value="Kat">Kat</option>
@@ -95,12 +98,14 @@
 
                     <!--Kæledyrs Race Start-->
                     <label>Kæledyrets race:</label><br>
-                    <input id="dyrRace" name="dyrRace" required></input><br>
+                    <?PHP if (!empty($formErrors['dyrRace'])) echo '<b>'.$formErrors['dyrRace'].'</b>'; ?>
+                    <input onkeyup="onBlurValidRace()" id="dyrRace" name="dyrRace" required></input><br>
                     <br>
                     <hr>
 
                     <!--Kæledyrs Alder Start-->
                     <label>Kæledyrs alder:</label><br>
+                    <?PHP if (!empty($formErrors['dyrAlder'])) echo '<b>'.$formErrors['dyrAlder'].'</b>'; ?>
                     <select id="dyrAlder" name="dyrAlder" required>
                         <option value="">Vælg alder</option>
                         <option value="0 - 2 år">0 - 2 År</option>
@@ -119,6 +124,7 @@
 
                     <!--Kæledyrs Vægt Start-->
                     <label>Kæledyrs vægt:</label><br>
+                    <?PHP if (!empty($formErrors['dyrVaegt'])) echo '<b>'.$formErrors['dyrVaegt'].'</b>'; ?>
                     <select id="dyrVaegt" name="dyrVaegt" required>
                         <option value="">Vælg vægt</option>
                         <option value="0  -2 kg">0 - 2 Kg</option>
@@ -141,6 +147,7 @@
 
                     <!--Kæledyrs Mad Start-->
                     <label>Kæledyrets yndlingsfoder:</label><br>
+                    <?PHP if (!empty($formErrors['dyrMad'])) echo '<b>'.$formErrors['dyrMad'].'</b>'; ?>
                     <select id="dyrMad" name="dyrMad" required>
                         <option value="">Vælg foder</option>
                         <option value="tørfoder">Tørfoder</option>
@@ -151,6 +158,7 @@
 
                     <!--Kæledyrs Bo Start-->
                     <label>Kæledyrets bopæl:</label><br>
+                    <?PHP if (!empty($formErrors['dyrBo'])) echo '<b>'.$formErrors['dyrBo'].'</b>'; ?>
                     <select id="dyrBo" name="dyrBo" required>
                         <option value="">Vælg bopæl</option>
                         <option value="i byen">I byen</option>
@@ -161,6 +169,7 @@
 
                     <!--Kæledyrs Vaccine Start-->
                     <label>Er kæledyret vaccineret?:</label><br>
+                    <?PHP if (!empty($formErrors['dyrVacc'])) echo '<b>'.$formErrors['dyrVacc'].'</b>'; ?>
                     <select id="dyrVacc" name="dyrVacc" required>
                         <option value="">Vælg...</option>
                         <option value="Ja">Ja</option>
@@ -171,6 +180,7 @@
 
                     <!--Kæledyrs Køn Start-->
                     <label>Kæledyrets Køn:</label><br>
+                    <?PHP if (!empty($formErrors['dyrSex'])) echo '<b>'.$formErrors['dyrSex'].'</b>'; ?>
                     <select id="dyrSex" name="dyrSex" required>
                         <option value="">Vælg køn</option>
                         <option value="Han">Han</option>
@@ -181,6 +191,7 @@
 
                     <!--Kæledyrs Farve Start-->
                     <label>Kæledyrs farve:</label><br>
+                    <?PHP if (!empty($formErrors['dyrFarve'])) echo '<b>'.$formErrors['dyrFarve'].'</b>'; ?>
                     <select id="dyrFarve" name="dyrFarve" required>
                         <option value="">Vælg farve</option>
                         <option value="brun">Brun</option>
@@ -195,12 +206,14 @@
 
                     <!--Kæledyrs Navn Start-->
                     <label>Navn på kæledyr:</label><br>
-                    <input id="dyrTekst" name="dyrTekst" required></input><br>
+                    <?PHP if (!empty($formErrors['dyrTekst'])) echo '<b>'.$formErrors['dyrTekst'].'</b>'; ?>
+                    <input onkeyup="onBlurValidTekst()" id="dyrTekst" name="dyrTekst" required></input><br>
                     <br>
 
                     <!--Ejer Navn Start-->
                     <label>Ejers navn:</label><br>
-                    <input id="dyrEjer" name="dyrEjer" required></input><br>
+                    <?PHP if (!empty($formErrors['dyrEjer'])) echo '<b>'.$formErrors['dyrEjer'].'</b>'; ?>
+                    <input onkeyup="onBlurValidEjer()" id="dyrEjer" name="dyrEjer" required></input><br>
                     <br>
 
                     <!--Submit Button-->
@@ -220,17 +233,10 @@
         </footer>
 
         <script src="js/formvalidering.js"></script>
-        <script type="text/javascript" id="cookieinfo"
-	src="//cookieinfoscript.com/js/cookieinfo.min.js"
-	data-bg="#272627"
-	data-fg="#FFFFFF"
-	data-link="#c1c1c1"
-    data-linkmsg="Mere info"
-    data-message="På vores website bruges cookies til at huske dine indstillinger. Ved fortsat brug af websiden godkender du cookiepolitikken."
-	data-cookie="CookieInfoScript"
-	data-text-align="left"
-    data-close-text="OK!">
-</script>
+        <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js" data-bg="#272627" data-fg="#FFFFFF" data-link="#c1c1c1" data-linkmsg="Mere info" data-message="På vores website bruges cookies til at huske dine indstillinger. Ved fortsat brug af websiden godkender du cookiepolitikken." data-cookie="CookieInfoScript" data-text-align="left" data-close-text="OK!">
+
+
+        </script>
 
 
 

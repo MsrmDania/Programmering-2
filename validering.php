@@ -55,12 +55,12 @@ if (empty($dyrEjer)) {
 //$_SESSION['formErrors'] = $errorsFound;
 //$_SESSION['lastInput'] = $_POST;
 
-if (!empty($errorsFound)) {
+/*if (!empty($errorsFound)) {
 	header('Location: index.php');
 }
 else {
 	$sql = "INSERT INTO pets (dyrType, dyrRace, dyrAlder, dyrVaegt, dyrMad, dyrBo, dyrVacc, dyrSex, dyrFarve, dyrTekst, dyrEjer) VALUES ('".$dyrType."', '".$dyrRace."', '".$dyrAlder."', '".$dyrVaegt."', '".$dyrMad."', '".$dyrBo."', '".$dyrVacc."', '".$dyrSex."', '".$dyrFarve."', '".$dyrTekst."', '".$dyrEjer."')";
-}
+}*/
 //Validering Slut
 
 
