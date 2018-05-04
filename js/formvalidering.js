@@ -16,7 +16,7 @@ vEjer = "false";
 
 //alert(vType + vRace + vAlder + vVaegt + vMad + vBo + vVacc + vSex + vFarve + vTekst + vEjer);
 
-//Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+
 document.getElementById("submit").disabled = true;
 document.getElementById("submit").style.color = "#a0a0a0";
 
@@ -110,12 +110,12 @@ function onBlurValidType() {
         vType = "true";
     }
 
-    if (vType = "true" && (vRace = "true" && (vAlder = "true" && (vVaegt = "true" && (vMad = "true" && (vBo = "true" && (vVacc = "true" && (vSex = "true" && (vFarve = "true" && (vTekst = "true" && (vEjer = "true"))))))))))) {
-        document.getElementById("submit").disabled = false;
-        document.getElementById("submit").style.color = "#000000";
-    } else {
+   if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
         document.getElementById("submit").disabled = true;
         document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
     }
 };
 
@@ -132,6 +132,15 @@ function onBlurValidRace() {
         document.getElementById("dyrRace").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vRace = "true";
     }
+    
+    //Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+    if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
+    }
 };
 
 function onFocusValidRace() {
@@ -146,6 +155,15 @@ function onBlurValidAlder() {
     } else {
         document.getElementById("dyrAlder").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vAlder = "true";
+    }
+    
+    //Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+    if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
     }
 };
 
@@ -164,6 +182,15 @@ function onBlurValidVaegt() {
     }
 };
 
+//Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
+    }
+
 function onFocusValidVaegt() {
     document.getElementById("dyrVaegt").style.backgroundColor = "rgba(247, 247, 183, 0.78)";
 };
@@ -176,7 +203,16 @@ function onBlurValidMad() {
     } else {
         document.getElementById("dyrMad").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vMad = "true";
-    };
+    }
+    
+    //Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+    if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
+    }
 };
 
 function onFocusValidMad() {
@@ -191,6 +227,15 @@ function onBlurValidBo() {
     } else {
         document.getElementById("dyrBo").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vBo = "true";
+    }
+    
+    //Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+    if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
     }
 };
 
@@ -207,6 +252,15 @@ function onBlurValidVacc() {
         document.getElementById("dyrVacc").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vVacc = "true";
     }
+    
+    //Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+    if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
+    }
 };
 
 function onFocusValidVacc() {
@@ -221,6 +275,15 @@ function onBlurValidSex() {
     } else {
         document.getElementById("dyrSex").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vSex = "true";
+    }
+    
+    //Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+    if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
     }
 };
 
@@ -237,6 +300,15 @@ function onBlurValidFarve() {
         document.getElementById("dyrFarve").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vFarve = "true";
     }
+    
+    //Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+    if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
+    }
 };
 
 function onFocusValidFarve() {
@@ -251,6 +323,15 @@ function onBlurValidTekst() {
     } else {
         document.getElementById("dyrTekst").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vTekst = "true";
+    }
+    
+    //Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+    if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
     }
 };
 
@@ -267,46 +348,18 @@ function onBlurValidEjer() {
         document.getElementById("dyrEjer").style.backgroundColor = "rgba(172, 253, 172, 0.71)";
         vEjer = "true";
     }
+    
+    //Låser submit knappen så man ikke kan indsende formularen før den er udfyldt
+    if (vType == "false" || vRace == "false" || vAlder == "false" || vVaegt == "false" || vMad == "false" || vBo == "false" || vVacc == "false" || vSex == "false" || vFarve == "false" || vTekst == "false" || vEjer == "false") {
+        document.getElementById("submit").disabled = true;
+        document.getElementById("submit").style.color = "#a0a0a0";
+    } else {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").style.color = "#000000";
+    }
 };
 
 
 function onFocusValidEjer() {
     document.getElementById("dyrEjer").style.backgroundColor = "rgba(247, 247, 183, 0.78)";
 };
-
-//Min Validation
-
-/*function validate() {
-    var select = document.getElementById('dyrType');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrRace');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrAlder');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrVaegt');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrMad');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrBo');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrVacc');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrSex');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrFarve');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrTekst');
-    return !select.value == 0;
-    
-    var select = document.getElementById('dyrEjer');
-    return !select.value == 0;
-}*/
